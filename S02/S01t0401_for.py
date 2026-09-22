@@ -24,10 +24,10 @@ total_sum = 0
 #3: sum <- 1 + 3
 for number in range(1,n+1):
      print(number,end = ",")
-sum = sum + number
+total_sum = total_sum + number
 
 
-print(f"La suma de 1 hasta {n} es: {sum}")
+print(f"La suma de 1 hasta {n} es: {total_sum}")
 
 #tomando el tiempo final
 timestamp_02 = time.time()
