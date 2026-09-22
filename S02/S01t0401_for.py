@@ -8,16 +8,37 @@ calculara la suma del 1 al 100
 #importamos biblioteca time 
 import time
 
-#creando una marca de tiempo 
+#tomando el tiempo inicial 
 timestamp_01 = time.time()
 
 #programa que calcule las suma
 #de los "n" numeros naturales 
 n = 100
-suma = 0
+total_sum = 0
 
 #ciclo for 
+#1: sum <- 0 + 1
+#sum = 1
+#2: sum <- 1 + 2
+#sum = 3
+#3: sum <- 1 + 3
 for number in range(1,n+1):
-    print(str(number) + " ")
+     print(number,end = ",")
+sum = sum + number
+
+
+print(f"La suma de 1 hasta {n} es: {sum}")
+
+#tomando el tiempo final
+timestamp_02 = time.time()
+
+#impreesionan del tiempo de ejecucion
+print(f"tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6:2f} μs ")
+
+
+
+
+
+
 
 
