@@ -23,8 +23,8 @@ total_sum = 0
 #sum = 3
 #3: sum <- 1 + 3
 for number in range(1,n+1):
-     print(number,end = ",")
-total_sum = total_sum + number
+     #print(number,end = ",")
+     total_sum = total_sum + number
 
 
 print(f"La suma de 1 hasta {n} es: {total_sum}")
@@ -33,7 +33,7 @@ print(f"La suma de 1 hasta {n} es: {total_sum}")
 timestamp_02 = time.time()
 
 #impreesionan del tiempo de ejecucion
-print(f"tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6:2f} μs ")
+print(f"tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6:.2f} μs ")
 
 
 
