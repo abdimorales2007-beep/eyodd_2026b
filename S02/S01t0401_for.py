@@ -5,34 +5,37 @@ Por ejemplo si n = 100, el programa
 calculara la suma del 1 al 100
 42 
 """
-import time
-
-print("--- MEDICIÓN DE TIEMPOS ---")
-
-# Repetimos 11 veces (del 1 al 11)
-for i in range(1, 12):
-    n = i * 500
+import time 
+#funcion que suma los primeros "n" numreso naturales
+def sum_of_n(n):
+    total_sum=0
+    #Sumando los "n" numeros 
+    #ciclo for
+    for number in range(1,n+1):
+      total_sum = total_sum + number
+      #retornando el total de la suma
+    return total_sum
     
-    # 1. Tiempo inicial
-    timestamp_01 = time.time()
-    
-    # 2. Sumamos los números
-    total_sum = 0
-    for numero in range(1, n + 1):
-        total_sum = total_sum + numero
-        
-    # 3. Tiempo final
-    timestamp_02 = time.time()
-    
-    # 4. Calculamos y redondeamos a 2 decimales
-    tiempo = round((timestamp_02 - timestamp_01) * 1000000, 2)
-    
-    # Mostramos el resultado
-    print("n =", n, "| Suma =", total_sum, "| Tiempo =", tiempo, "us")
+#variable para guardar 
+#el data set
+dataset=[] #[(n,time,sum),(n,time,Sum)]
+#generando el contenido de DATSET
+for repetition in range(1,11):
+ #tomando el tiempo (inicial)
+ timestamp_01 = time.time()
+ #sumo los "n" números
+ n= repetition*100
+ result=sum_of_n(n)
+ #⏱️tomamdo el tiempo 1 (final)
+ timestamp_02=time.time()
+ #calculando el  tiempo
+ elapsed_time = round ((timestamp_02-timestamp_01) * 1e6,2)
+ #Agregar la tripleta de los datos al dataset
+ dataset.append((n,elapsed_time,result))
 
 
-
-
+for tup in dataset:
+  print(tup)
 
 
 
