@@ -19,7 +19,7 @@ import array as arr
 #f: Numero decimal
 #d: Numero decimal de doble 
 #u: Carácteres unicode
-my_array = arr.array('i',[11, 22, 333,33,77, 44, 55, 88, 777, 666,888])
+my_array = arr.array('i',[1, 22, 300,3,7, 44, 55, 88, 777, 666,888])
 
 #Interación automatica
 for num in my_array:
@@ -35,9 +35,15 @@ print(my_array[1]) #tercer elemento
 print(len(my_array)) #tamaño del arreglo
 
 #Iteración con indices
-for i in range(len(my_array)):
-    print(f"Elemento {i+1}: {my_array[i]}")
+# for i in range(len(my_array)):
+    # print(f"Elemento {i+1}: {my_array[i]}")
 
 #print(f"Elemento Num {i+1}: {my_array[i]}") para imprimir solo los pares
-    
 
+num_to_search = 80
+# Modificando un valor en el arreglo usando
+#backet notation
+try: 
+    print(f"localizacion {num_to_search}: {my_array.index(num_to_search)}")
+except ValueError:
+    print("⚠️ Numero no encontrado‼‼")
