@@ -8,15 +8,20 @@ from array import array as arr
 
 from S02t0102_1d import print_array
 
-my_array = arr('i',[2,10,15,20])
+my_array = arr('i',[2,10,15,20,10])
 
 print("---ANTES DE INSERCIÓN---")
 print_array(my_array)
 
-#Inserción 
-my_array.insert(1, 90)
-print("---DESPUÉS DE INSERCIÓN---")
-print_array(my_array)   
+#Elimación
+try:
+    my_array.remove(100)
+except:
+    print("🔍Numero no encontrado!!")
+print("---DESPUÉS DE ELIMINACIÓN---")
+print_array(my_array) 
+
+  
 
 print("---DESPUES DEL APPEND---")
 my_array.append(1000)
